@@ -1,4 +1,4 @@
-import "../styles.css"; // Styles.css son los estilos del perfil
+import "./styles.css"; // Styles.css son los estilos del perfil
 import Sidebar from "./Sidebar";
 import Detalles_usuario from "./Detalles_usuario";
 
