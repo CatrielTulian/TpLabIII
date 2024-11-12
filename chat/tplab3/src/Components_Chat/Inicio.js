@@ -2,23 +2,18 @@ import "./App.css";
 
 function Inicio(props) {
   return (
-    <div className="modal" tabindex="-1">
-      <div className="modal-dialog">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h1 className="modal-title">Bienvenidos al chat</h1>
-            <button
-              type="button"
-              className="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div className="modal-body">
-            <p>App Chat</p>
-          </div>
-        </div>
+    <div class="card text-center inicio">
+      <div class="card-header">Featured</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+        <a href="#" class="btn btn-primary">
+          Go somewhere
+        </a>
       </div>
+      <div class="card-footer text-body-secondary">2 days ago</div>
     </div>
   );
 }

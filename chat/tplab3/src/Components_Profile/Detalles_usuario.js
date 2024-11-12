@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Imagenes from "../Img/Imagenes.js";
+import "./styles.css";
 
 function Detalles_usuario(props) {
   // Estado para manejar los valores del formulario como un objeto
@@ -89,8 +90,11 @@ function Detalles_usuario(props) {
               />
             </div>
           </div>
-          <button type="submit" id="save-btn">
+          <button type="submit" className="btn btn-primary">
             Guardar Cambios
+          </button>
+          <button type="submit" className="btn btn-secondary">
+            Realizar cambios
           </button>
         </form>
       </div>
