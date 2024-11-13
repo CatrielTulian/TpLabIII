@@ -4,6 +4,20 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+#titulo {
+  color: #0ba3e4;
+  padding: auto;
+  border: 10px;
+  background-color: #bdc3c7;
+}
+.card-body {
+  background-color: rgb(230, 230, 230);
+}
+#container-card {
+  border-radius: 15%;
+  width: 40%;
+  margin: auto;
+}
 
 .container-app {
   display: flex;

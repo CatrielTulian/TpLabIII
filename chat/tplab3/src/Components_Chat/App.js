@@ -1,5 +1,4 @@
 import "./App.css";
-
 import Sidebar from "./Sidebar.js";
 import Cabecera_chat from "./Cabecera_chat.js";
 import Chat_activo from "./Chat_activo.js";
@@ -12,6 +11,7 @@ const paginas = ["inicio", "chats", "configuraciones"];
 
 function App() {
   const [pagina, setPagina] = useState(paginas[0]);
+  const [config, setConfig] = useState([]);
 
   return (
     <div className="container-app">
