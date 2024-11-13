@@ -26,6 +26,9 @@
 .menu h2 {
   margin-bottom: 20px;
 }
+.btn-primary {
+  margin: 7px;
+}
 
 #new-settings-btn {
   width: 100%;

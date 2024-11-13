@@ -2,22 +2,13 @@ import "./App.css";
 
 function Inicio(props) {
   return (
-    <div className="modal" tabindex="-1">
-      <div className="modal-dialog">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h1 className="modal-title">Bienvenidos al chat</h1>
-            <button
-              type="button"
-              className="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div className="modal-body">
-            <p>App Chat</p>
-          </div>
-        </div>
+    <div class="card text-center" id="container-card">
+      <div class="card-header" id="titulo">
+        <h3>Aplicación de Mensajes</h3>
+      </div>
+      <div class="card-body">
+        <h5 class="rd-title">Esta es la pantalla de inicio.</h5>
+        <p class="card-text">Ningún chat se ha seleccionado todavía...</p>
       </div>
     </div>
   );

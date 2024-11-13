@@ -4,8 +4,22 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+#titulo {
+  color: #0ba3e4;
+  padding: auto;
+  border: 10px;
+  background-color: #bdc3c7;
+}
+.card-body {
+  background-color: rgb(230, 230, 230);
+}
+#container-card {
+  border-radius: 15%;
+  width: 40%;
+  margin: auto;
+}
 
-.container {
+.container-app {
   display: flex;
   height: 100vh;
 }
@@ -50,17 +64,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-.modal-title {
-  text-align: center;
-  background-color: #3498db;
-  color: #ecf0f1;
-  padding: 20px;
-}
-.modal-body {
-  position: relative;
-  flex: 1 1 auto;
-  padding: var(--bs-modal-padding);
 }
 
 .chat-header {

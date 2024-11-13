@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Imagenes from "../Img/Imagenes.js";
+import "./styles.css";
 
 function Detalles_usuario(props) {
   // Estado para manejar los valores del formulario como un objeto
@@ -9,6 +10,8 @@ function Detalles_usuario(props) {
     password: "",
     profilePicture: Imagenes.profile,
   });
+
+  const [readOnly, setReadOnly] = useState(false);
 
   // Función para manejar los cambios en los inputs
   const handleInputChange = (e) => {
@@ -34,11 +37,16 @@ function Detalles_usuario(props) {
     }
   };
 
-  // Función para manejar el envío del formulario
-  const handleSubmit = (e) => {
+  const handleSave = (e) => {
     e.preventDefault();
-    // Aquí puedes enviar los datos del formulario a un servidor o hacer alguna validación
-    console.log("Formulario enviado con:", Values);
+    setReadOnly(true);
+    console.log("Guardar cambios con:", Values);
+  };
+
+  // Manejador para el botón "Realizar cambios"
+  const handleApplyChanges = (e) => {
+    e.preventDefault();
+    setReadOnly(false);
   };
 
   return (
@@ -47,7 +55,7 @@ function Detalles_usuario(props) {
         <h2>Información de Usuario</h2>
       </header>
       <div className="settings-content">
-        <form id="user-form" onSubmit={handleSubmit}>
+        <form id="user-form">
           <div className="form-body">
             <div className="form-group">
               <label htmlFor="username">Nombre de Usuario</label>
@@ -57,6 +65,7 @@ function Detalles_usuario(props) {
                 value={Values.username}
                 onChange={handleInputChange}
                 placeholder="Nombre de usuario"
+                disabled={readOnly}
               />
             </div>
             <div className="form-group">
@@ -67,6 +76,7 @@ function Detalles_usuario(props) {
                 value={Values.email}
                 onChange={handleInputChange}
                 placeholder="Correo electrónico"
+                disabled={readOnly}
               />
             </div>
             <div className="form-group">
@@ -77,6 +87,7 @@ function Detalles_usuario(props) {
                 value={Values.password}
                 onChange={handleInputChange}
                 placeholder="Contraseña"
+                disabled={readOnly}
               />
             </div>
             <div className="picture-container">
@@ -86,11 +97,23 @@ function Detalles_usuario(props) {
                 id="picture-selection"
                 onChange={handlePictureChange}
                 placeholder="../Img/profile"
+                disabled={readOnly}
               />
             </div>
           </div>
-          <button type="submit" id="save-btn">
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={handleSave}
+          >
             Guardar Cambios
+          </button>
+          <button
+            type="submit"
+            className="btn btn-secondary"
+            onClick={handleApplyChanges}
+          >
+            Realizar cambios
           </button>
         </form>
       </div>
