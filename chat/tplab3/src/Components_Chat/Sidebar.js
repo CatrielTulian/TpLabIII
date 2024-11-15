@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { MdSettingsSuggest } from "react-icons/md";
 
-function Sidebar(props, { setPagina }) {
+function Sidebar(props) {
+  const { setPagina, setSeleccionarChat } = props;
+
   return (
     <aside className="sidebar">
       <div className="menu">
@@ -9,7 +11,10 @@ function Sidebar(props, { setPagina }) {
         <ul>
           <li>
             <a
-              onClick={() => props.setPagina("chats")}
+              onClick={() => {
+                setPagina("chats");
+                setSeleccionarChat("chat1");
+              }}
               className="navbar-nav"
               href="#"
               id="1"
@@ -19,7 +24,10 @@ function Sidebar(props, { setPagina }) {
           </li>
           <li>
             <a
-              onClick={() => props.setPagina("chats")}
+              onClick={() => {
+                setPagina("chats");
+                setSeleccionarChat("chat2");
+              }}
               className="navbar-nav"
               href="#"
               id="2"
@@ -29,7 +37,10 @@ function Sidebar(props, { setPagina }) {
           </li>
           <li>
             <a
-              onClick={() => props.setPagina("chats")}
+              onClick={() => {
+                setPagina("chats");
+                setSeleccionarChat("chat3");
+              }}
               className="navbar-nav"
               href="#"
               id="3"
@@ -41,12 +52,11 @@ function Sidebar(props, { setPagina }) {
       </div>
       <div className="config">
         <a
-          onClick={() => props.setPagina("configuraciones")}
+          onClick={() => setPagina("configuraciones")}
           className="navbar-nav"
           href="#"
         >
           <li>
-            {" "}
             Configuración <MdSettingsSuggest />
           </li>
         </a>
@@ -54,4 +64,5 @@ function Sidebar(props, { setPagina }) {
     </aside>
   );
 }
+
 export default Sidebar;
