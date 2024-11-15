@@ -6,12 +6,20 @@ import Entrada_texto from "./Entrada_texto.js";
 import Inicio from "./Inicio.js";
 import Detalles_usuario from "../Components_Profile/Detalles_usuario.js";
 import { useState, useRef } from "react";
+import Imagenes from "../Img/Imagenes.js";
 
 const paginas = ["inicio", "chats", "configuraciones"];
 
 function App() {
   const [pagina, setPagina] = useState(paginas[0]);
   const [config, setConfig] = useState([]);
+  const valoresIniciales = {
+    username: "",
+    email: "",
+    password: "",
+    profilePicture: Imagenes.profile,
+  };
+  const [Values, setValues] = useState(valoresIniciales);
 
   return (
     <div className="container-app">
@@ -28,7 +36,7 @@ function App() {
           <></>
         )}
         {pagina === "configuraciones" ? (
-          <Detalles_usuario></Detalles_usuario>
+          <Detalles_usuario Values={Values} setValues={setValues} />
         ) : (
           <></>
         )}
