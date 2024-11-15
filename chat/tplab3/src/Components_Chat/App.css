@@ -35,6 +35,7 @@
 
 .menu {
   margin-top: 50px;
+  flex: 1;
 }
 
 .menu h2 {
@@ -122,4 +123,13 @@
 
 .chat-input button:hover {
   background-color: #2980b9;
+}
+
+.config a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 18px;
 }
