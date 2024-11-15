@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "mensaje": "Hola, Como estás"
+  },
+  {
+    "id": 2,
+    "mensaje": "Hola, ¿podemos hablar?"
+  },
+  {
+    "id": 3,
+    "mensaje": "¿Estás ocupado?"
+  }
+]

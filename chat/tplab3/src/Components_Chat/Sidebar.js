@@ -12,6 +12,7 @@ function Sidebar(props, { setPagina }) {
               onClick={() => props.setPagina("chats")}
               className="navbar-nav"
               href="#"
+              id="1"
             >
               Chat 1
             </a>
@@ -21,6 +22,7 @@ function Sidebar(props, { setPagina }) {
               onClick={() => props.setPagina("chats")}
               className="navbar-nav"
               href="#"
+              id="2"
             >
               Chat 2
             </a>
@@ -30,6 +32,7 @@ function Sidebar(props, { setPagina }) {
               onClick={() => props.setPagina("chats")}
               className="navbar-nav"
               href="#"
+              id="3"
             >
               Chat 3
             </a>
@@ -42,7 +45,10 @@ function Sidebar(props, { setPagina }) {
           className="navbar-nav"
           href="#"
         >
-          Configuración <MdSettingsSuggest />
+          <li>
+            {" "}
+            Configuración <MdSettingsSuggest />
+          </li>
         </a>
       </div>
     </aside>
