@@ -1,14 +1,17 @@
 [
   {
     "id": 1,
-    "mensaje": "Hola, Como estás"
+    "contacto": "chat1",
+    "mensaje": "Hola, ¿cómo estás?"
   },
   {
     "id": 2,
+    "contacto": "chat2",
     "mensaje": "Hola, ¿podemos hablar?"
   },
   {
     "id": 3,
+    "contacto": "chat3",
     "mensaje": "¿Estás ocupado?"
   }
 ]
