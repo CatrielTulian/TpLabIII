@@ -47,7 +47,7 @@ function App() {
                   </div>
                 ))
               ) : (
-                <p>No hay mensajes para mostrar.</p>
+                <></>
               )}
             </div>
             <Entrada_texto />

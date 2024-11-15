@@ -1,8 +1,11 @@
+import { FaArrowAltCircleRight } from "react-icons/fa";
 function Entrada_texto(props) {
   return (
     <footer className="chat-input">
       <input type="text" placeholder="Escribe un mensaje..."></input>
-      <button>Enviar</button>
+      <button>
+        Enviar <FaArrowAltCircleRight />
+      </button>
     </footer>
   );
 }
