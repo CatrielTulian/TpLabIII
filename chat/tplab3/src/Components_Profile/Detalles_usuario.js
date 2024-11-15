@@ -3,10 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
 
 function Detalles_usuario({ Values, setValues }) {
-  // El readOnly es medio confuso porque abajo estamos usando disabled
-  // digamos que el componente cuando hace el render arranca con disabled en true
   const [editar, setEditar] = useState();
-
   const handleInputChange = (e) => {
     const { id, value } = e.target;
     setValues((prevValues) => ({
